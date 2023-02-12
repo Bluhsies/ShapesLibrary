@@ -1,0 +1,52 @@
+.TH "Line" 3 "Sun Oct 30 2022" "LabBook1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Line
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <line\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLine\fP ()"
+.br
+.RI "Contructor\&. "
+.ti -1c
+.RI "\fBLine\fP (sf::Vector2f p1, sf::Vector2f p2, sf::Color c1)"
+.br
+.RI "Overloaded constructor to take position and colour\&. "
+.ti -1c
+.RI "void \fBdraw\fP (sf::RenderTarget &target, sf::RenderStates states) const override"
+.br
+.RI "Instantiated draw function from \fBShapes\fP class\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This is the \fBLine\fP class\&. This includes the basic constructor, overloaded constructor to take the positions of the \fBLine\fP when drawn to the screen and the overridden draw function, which is used to draw the shape itself to the screen, once an object has been created in the main function to do so\&. This class also includes access to the public functions (or protected) from the \fBShapes\fP class, such as the Vertex Array, size variable, etc\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Line::Line ()"
+
+.PP
+Contructor\&. Default constructor with default positions for the line\&. 
+.SS "Line::Line (sf::Vector2f p1, sf::Vector2f p2, sf::Color c1)"
+
+.PP
+Overloaded constructor to take position and colour\&. Overloaded constructor which implements the two points for the line, colour, size of the vertex array and assigns the colour to each line\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Line::draw (sf::RenderTarget & target, sf::RenderStates states) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Instantiated draw function from \fBShapes\fP class\&. Instantiated draw function\&. 
+.PP
+Implements \fBShapes\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for LabBook1 from the source code\&.

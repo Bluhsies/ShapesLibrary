@@ -1,0 +1,63 @@
+.TH "Shapes" 3 "Sun Oct 30 2022" "LabBook1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Shapes
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <shapes\&.h>\fP
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBdraw\fP (sf::RenderTarget &target, sf::RenderStates states) const =0"
+.br
+.RI "This virtual void function will allow the shapes to be drawn\&. This cannot be instantiated in the Shape class, but is subsequently instantiated in each of the shape drawing classes\&. "
+.ti -1c
+.RI "\fBShapes\fP (int arraySize, sf::Color custom)"
+.br
+.RI "This is the overloaded constructor which will take values for the size of the array and the selected colour for the lines to be drawn in\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "sf::VertexArray \fBvaArray\fP"
+.br
+.RI "This is the array which will be used for each shape, in each class which inherits and draws a shape to screen\&. "
+.ti -1c
+.RI "sf::Color \fBcustomColours\fP"
+.br
+.RI "This variable is used to gain the RGB value of the colour which is used for the shapes, from the main\&. This will then allow the individual shape classes to apply the selected colour to each line\&. "
+.ti -1c
+.RI "int \fBiArraySize\fP"
+.br
+.RI "This integer is to set the size of the array, once the value fro arraySize in the constructor has been input in the child class\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the Shape class, which allows the user to take information to construct shapes from the library, which are common to all of the shapes\&. For example, a Vertex Array is utilised in each shape; however, as the values have not been filled out, they can be filled out for each shape individually\&.
+.PP
+The Shape class contains a number of protected data types and functions, such as the Vertex Array for each shape, the integer size which will be used to resize each array, a virtual void for the draw function from SFML which can be overridden in each shape class and a constructor which will check to see what array size has been input each shape class, to determine if sf::Points or sf::LinesStrip is required\&. It will also utilise the colour implemented in the main\&.
+.PP
+This function makes use of the SFML library, which will in turn be used by the child classes which draw shapes to draw the shapes to the screen\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Shapes::Shapes (int arraySize, sf::Color custom)\fC [protected]\fP"
+
+.PP
+This is the overloaded constructor which will take values for the size of the array and the selected colour for the lines to be drawn in\&. Within the Shape\&.cpp file, the overridden constructor will take an integer value to determine whether the shape will be drawn using sf::Points or sf::LinesStrip\&. It will also resize the array to the appropriate size for the number of points which are required\&. As an example, the \fBOctagon\fP class will use the value 8 to represent the arraySize variable, which will go through the if statement to determine that the vaArray needs to be resized to 8+1 (so that the final line is drawn to connect the last point and the starting point) and to set the primitive type to LinesStrip, which will in turn be used to draw the shape\&. The if and else if statement will be used in drawing each shape, however, in certain circumstances the vaArray size has been implemented locally in the shape, as the additional line is not required\&. e\&.g, the \fBArc\fP does not require the last point and first point to be connected\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void Shapes::draw (sf::RenderTarget & target, sf::RenderStates states) const\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+This virtual void function will allow the shapes to be drawn\&. This cannot be instantiated in the Shape class, but is subsequently instantiated in each of the shape drawing classes\&. 
+.PP
+Implemented in \fBArc\fP, \fBCircle\fP, \fBDot\fP, \fBHexagon\fP, \fBLine\fP, \fBOctagon\fP, \fBSquare\fP, and \fBTriangle\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for LabBook1 from the source code\&.

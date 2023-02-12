@@ -1,0 +1,47 @@
+.TH "CircularData" 3 "Sun Oct 30 2022" "LabBook1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CircularData
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <circularData\&.h>\fP
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCircularData\fP (float radianValue)"
+.br
+.RI "This function will take the radianValue supplied within the classes which inherit from \fBCircularData\fP\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const float \fBfPi\fP = 3\&.141f"
+.br
+.RI "This is the constant value for pi\&. "
+.ti -1c
+.RI "float \fBfTheta\fP"
+.br
+.RI "This is the variable for theta\&. "
+.ti -1c
+.RI "float \fBfRadian\fP"
+.br
+.RI "This is the variable for radians\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the \fBCircularData\fP class\&. This includes information which is common in the \fBHexagon\fP, \fBOctagon\fP, \fBCircle\fP and \fBArc\fP classes\&. However, as this data is not relevant to the \fBDot\fP, \fBLine\fP, \fBTriangle\fP or \fBSquare\fP, they do not inherit from this class\&. This includes the constant float variable for pi, the float value for theta, the float value for the radian and the overridden constructor to take the radian value for the circular shape\&. This class will also inherit the information stored within the \fBShapes\fP class, to be used through multi level inheritance, allowing the classes which derive from \fBCircularData\fP to also make use of the information\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CircularData::CircularData (float radianValue)\fC [protected]\fP"
+
+.PP
+This function will take the radianValue supplied within the classes which inherit from \fBCircularData\fP\&. This is the CircularData\&.cpp\&. This includes the value's for theta and the radians\&. The radian is the same as the radian value, which is supplied in the classes which inherit from \fBCircularData\fP\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for LabBook1 from the source code\&.

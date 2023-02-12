@@ -1,0 +1,52 @@
+.TH "Square" 3 "Sun Oct 30 2022" "LabBook1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Square
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <square\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSquare\fP ()"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fBSquare\fP (sf::Vector2f p1, float distance, sf::Color c1)"
+.br
+.RI "Overloaded constructor\&. "
+.ti -1c
+.RI "void \fBdraw\fP (sf::RenderTarget &target, sf::RenderStates states) const override"
+.br
+.RI "Instantiated draw function\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This is the \fBSquare\fP class\&. This includes the basic constructor, overloaded constructor to take the position of the \fBSquare\fP when drawn to the screen and the overridden draw function, which is used to draw the shape itself to the screen, once an object has been created in the main function to do so\&. This class also includes access to the public functions (or protected) from the \fBShapes\fP class, such as the Vertex Array, size variable, etc\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Square::Square ()"
+
+.PP
+Constructor\&. Constructor to take basic values which will be overidden\&. 
+.SS "Square::Square (sf::Vector2f p1, float distance, sf::Color c1)"
+
+.PP
+Overloaded constructor\&. Overloaded constructor which will take the central point of the square, distance (height and width as they are the same value) and the colour of the square\&. The Vector2fs are used to determine the origin point of each line, when p1 is supplied\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Square::draw (sf::RenderTarget & target, sf::RenderStates states) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Instantiated draw function\&. Instantiated draw function to draw the shape to the screen\&. 
+.PP
+Implements \fBShapes\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for LabBook1 from the source code\&.

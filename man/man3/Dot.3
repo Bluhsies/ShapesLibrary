@@ -1,0 +1,52 @@
+.TH "Dot" 3 "Sun Oct 30 2022" "LabBook1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Dot
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dot\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDot\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "\fBDot\fP (sf::Vector2f p1, sf::Color c1)"
+.br
+.RI "Overloaded constructor to take a Vector2f for the location of the dot on the screen and the colour\&. "
+.ti -1c
+.RI "void \fBdraw\fP (sf::RenderTarget &target, sf::RenderStates states) const override"
+.br
+.RI "Instantiated draw function to allow the dot to be drawn to the screen\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This is the \fBDot\fP class\&. This includes the basic constructor, overloaded constructor to take the position of the \fBDot\fP when drawn to the screen and the overridden draw function, which is used to draw the shape itself to the screen, once an object has been created in the main function to do so\&. This class also includes access to the public functions (or protected) from the \fBShapes\fP class, such as the Vertex Array, size variable, etc\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Dot::Dot ()"
+
+.PP
+Default constructor\&. Default constructor which holds a default position for the dot shape when drawn to screen\&. 
+.SS "Dot::Dot (sf::Vector2f p1, sf::Color c1)"
+
+.PP
+Overloaded constructor to take a Vector2f for the location of the dot on the screen and the colour\&. Overloaded contructor which will take the position provided in the main and the colour provided in the main\&. It will also assign the size of the vertex array in the \fBShapes\fP class\&. For loop will assign the selected colour to the Point\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Dot::draw (sf::RenderTarget & target, sf::RenderStates states) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Instantiated draw function to allow the dot to be drawn to the screen\&. Instantiated draw function to draw the shape\&. 
+.PP
+Implements \fBShapes\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for LabBook1 from the source code\&.

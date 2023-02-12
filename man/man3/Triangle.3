@@ -1,0 +1,52 @@
+.TH "Triangle" 3 "Sun Oct 30 2022" "LabBook1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Triangle
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <triangle\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTriangle\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "\fBTriangle\fP (sf::Vector2f base, float diameter, float height, sf::Color c1)"
+.br
+.RI "Overloaded constructor\&. "
+.ti -1c
+.RI "void \fBdraw\fP (sf::RenderTarget &target, sf::RenderStates states) const override"
+.br
+.RI "Instantiated draw function\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This is the \fBTriangle\fP class\&. This includes the basic constructor, overloaded constructor to take the position of the \fBTriangle\fP when drawn to the screen and the overridden draw function, which is used to draw the shape itself to the screen, once an object has been created in the main function to do so\&. This class also includes access to the public functions (or protected) from the \fBShapes\fP class, such as the Vertex Array, size variable, etc\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Triangle::Triangle ()"
+
+.PP
+Default constructor\&. Default constructor which takes basic values to be replaced\&. 
+.SS "Triangle::Triangle (sf::Vector2f base, float diameter, float height, sf::Color c1)"
+
+.PP
+Overloaded constructor\&. Overloaded constructor which will take the base (central point) of the triangle, diameter, height and color, as well as setting the vertex array size\&. The Vector2fs will calculate where the points are situated based on the base value supplied in the main\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Triangle::draw (sf::RenderTarget & target, sf::RenderStates states) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Instantiated draw function\&. Instantiated draw function to draw the shape to the screen\&. 
+.PP
+Implements \fBShapes\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for LabBook1 from the source code\&.
